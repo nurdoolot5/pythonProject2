@@ -76,4 +76,28 @@
 # array = [64, 23, 89, 6, 1, 12, 33]
 
 # print(Bubble.bubble_sort(array))
+class Palindrome:
+    def __init__(self, number: int):
+        self.num = number
 
+    def is_palindrome_short(self):
+        if self.num <= 0 or str(self.num) != str(self.num)[::-1]:
+            return False
+        else:
+            return True
+
+    def is_palindrome_str(self):
+        if self.num <= 0:
+            return False
+        n = 1
+        for i in range(len(str(self.num))):
+            if str(self.num)[i] != str(self.num)[len(str(self.num)) - n]:
+                return False
+            n += 1
+        return True
+
+
+num = 343
+num_1 = Palindrome(num)
+print(f'{num}: {num_1.is_palindrome_short()}')
+print(f'{num}: {num_1.is_palindrome_str()}')
