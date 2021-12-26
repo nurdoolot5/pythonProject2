@@ -97,7 +97,7 @@ class Palindrome:
         return True
 
 
-num = 343
+num = 342
 num_1 = Palindrome(num)
 print(f'{num}: {num_1.is_palindrome_short()}')
 print(f'{num}: {num_1.is_palindrome_str()}')
